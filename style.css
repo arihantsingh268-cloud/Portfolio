@@ -183,5 +183,13 @@ function type() {
 }
 
 type();
+.project {
+  perspective: 1000px;
+}
+
+.project:hover {
+  transform: rotateX(6deg) rotateY(-6deg) scale(1.05);
+}
+
 
 
