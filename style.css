@@ -197,6 +197,21 @@ type();
 .project:hover {
   transform: rotateX(6deg) rotateY(-6deg) scale(1.05);
 }
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    width: 92%;
+  }
+
+  .projects,
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
