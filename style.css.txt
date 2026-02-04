@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  background: #050510;
+  overflow-x: hidden;
+}
+
+/* Animated background */
+.bg-animation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #0ff, #6f00ff, #00ff9d);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glow {
+  font-size: 3.5rem;
+  text-shadow: 0 0 20px #0ff;
+}
+
+.subtitle {
+  margin: 15px 0;
+  opacity: 0.9;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: 1px solid #0ff;
+  color: #0ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 20px #0ff;
+}
+
+.card {
+  width: 80%;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills span {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 14px;
+  border: 1px solid #0ff;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 15px #0ff;
+}
