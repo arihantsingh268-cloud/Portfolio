@@ -152,4 +152,36 @@ body {
   margin-top: 12px;
   color: #0ff;
 }
+const text = [
+  "Web Developer",
+  "UI Engineer",
+  "JavaScript Specialist",
+  "Modern Frontend Creator"
+];
+
+let i = 0, j = 0, current = "", isDeleting = false;
+const el = document.querySelector(".typing");
+
+function type() {
+  if (!el) return;
+
+  if (!isDeleting && j <= text[i].length) {
+    current = text[i].substring(0, j++);
+  } else if (isDeleting && j >= 0) {
+    current = text[i].substring(0, j--);
+  }
+
+  el.textContent = current;
+
+  if (j === text[i].length) isDeleting = true;
+  if (j === 0 && isDeleting) {
+    isDeleting = false;
+    i = (i + 1) % text.length;
+  }
+
+  setTimeout(type, isDeleting ? 60 : 100);
+}
+
+type();
+
 
